@@ -27,11 +27,9 @@ describe( 'wp.users', function() {
 		});
 
 		it( 'should initialize _options to the site defaults', function() {
-			expect( users._options ).to.deep.equal({
-				endpoint: '/wp-json/',
-				username: 'foouser',
-				password: 'barpass'
-			});
+			expect( users._options.endpoint ).to.equal( '/wp-json/' );
+			expect( users._options.username ).to.equal( 'foouser' );
+			expect( users._options.password ).to.equal( 'barpass' );
 		});
 
 		it( 'should initialize the base path component', function() {
@@ -60,8 +58,11 @@ describe( 'wp.users', function() {
 
 	describe( '.id()', function() {
 
-		it( 'should be defined', function() {
+		it( 'is defined', function() {
 			expect( users ).to.have.property( 'id' );
+		});
+
+		it( 'is a function', function() {
 			expect( users.id ).to.be.a( 'function' );
 		});
 

@@ -27,11 +27,9 @@ describe( 'wp.media', function() {
 		});
 
 		it( 'should initialize _options to the site defaults', function() {
-			expect( media._options ).to.deep.equal({
-				endpoint: '/wp-json/',
-				username: 'foouser',
-				password: 'barpass'
-			});
+			expect( media._options.endpoint ).to.equal( '/wp-json/' );
+			expect( media._options.username ).to.equal( 'foouser' );
+			expect( media._options.password ).to.equal( 'barpass' );
 		});
 
 		it( 'should initialize the base path component', function() {
@@ -51,8 +49,11 @@ describe( 'wp.media', function() {
 
 	describe( '.id()', function() {
 
-		it( 'should be defined', function() {
+		it( 'is defined', function() {
 			expect( media ).to.have.property( 'id' );
+		});
+
+		it( 'is a function', function() {
 			expect( media.id ).to.be.a( 'function' );
 		});
 

@@ -4,7 +4,7 @@
     "url": "http://www.kadamwhite.com"
   },
   "name": "wpapi",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "A client for interacting with the WordPress REST API",
   "main": "wpapi.js",
   "repository": {
@@ -77,7 +77,6 @@
     "minimist": "^1.2.0",
     "mocha": "^2.5.3",
     "prompt": "^1.0.0",
-    "sandboxed-module": "^2.0.3",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "webpack": "^1.13.1"
